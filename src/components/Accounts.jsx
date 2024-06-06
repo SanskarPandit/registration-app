@@ -27,23 +27,20 @@ const Accounts = () => {
     //This is used to update the data
     const handleUpdate = async (e) => {
         e.preventDefault();
-        if (displayName.trim() === '') {
-            alert('Name cannot be empty.');
-            return;
-        }
+
         try {
             await updateProfile(auth.currentUser, { displayName, email })
             alert('Account Update');
-            navigate('/')
+            navigate('/account')
         } catch (err) {
             alert('Update failed' + err)
         }
     }
     return (
         user && (
-            <div className="container">
-                <div className="title" style={{ padding: '3%', margin: '5%' }}>Manage Your Account</div>
-                {/* On Click of edit button the disabled input fields and and update button will be shown  */}
+            // {/* On Click of edit button the disabled input fields and and update button will be shown  */}
+            <div className="container" >
+                <div className="title" style={{ padding: '2%', margin: '2%' }}>Manage Your Account</div>
                 {!isEditing ? (
                     <div className="inputs">
                         <div className="form-group row">

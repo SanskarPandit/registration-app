@@ -4,7 +4,7 @@ import personIcon from "../assets/person.png"
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from "../firbase.config";
 
 const Register = () => {
@@ -18,13 +18,14 @@ const Register = () => {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             await updateProfile(userCredential.user, { displayName: name });
-            navigate('/');
+
         } catch (err) {
             alert('Registration Failed' + err)
         }
+        navigate('/');
     }
     return (
-        <div className="container">
+        <div className="container" style={{ margin: '2%', padding: "2%" }}>
             <div className="header">
                 <div className="title">Register</div>
                 <div className="underline"></div>
