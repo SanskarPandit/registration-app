@@ -1,8 +1,8 @@
-# React + Vite
+# Registration App in React (Firebase)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a react + vite app.The Authentication is done using firebase and all the information is fetched from the firebase and shown on the screen. This is the responsive app developed in Bootstrap.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this app
+1) npm install // install the node modules
+2) npm run dev // to run this application
+3) And You can Register , Login and Manage your account 
