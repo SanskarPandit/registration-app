@@ -25,7 +25,7 @@ const Register = () => {
         navigate('/');
     }
     return (
-        <div className="container" style={{ margin: '2%', padding: "2%" }}>
+        <div className="container" >
             <div className="header">
                 <div className="title">Register</div>
                 <div className="underline"></div>
@@ -50,6 +50,12 @@ const Register = () => {
                     <div className="col-sm-10 input">
                         <label className="col-sm-2 col-form-label"><img src={passwordIcon} /></label>
                         <input type="password" className="form-control " placeholder="Password" required onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                </div>
+                <div className="form-group row">
+                    <div className="col-sm-10 input">
+                        <label className="col-sm-2 col-form-label"><img src={passwordIcon} /></label>
+                        <input type="password" className="form-control " placeholder="Confirm Password" required onChange={(e) => setPassword(e.target.value)} />
                     </div>
                 </div>
                 {/* If have an account then navigate to login page */}
